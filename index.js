@@ -3,6 +3,7 @@ import 'dotenv/config';
 import connectDB from "./DB/connectDB.js";
 import User from "./models/user.model.js";
 import userRouter from "./router/user.router.js";
+import productRouter from "./router/product.router.js";
 
 const app = express();
 
@@ -10,6 +11,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.use("/user", userRouter);
+
+app.use('/product', productRouter)
 
 app.get('/', (req,res)=>{
     res.status(200).json({success : true, status : "Server running"})
