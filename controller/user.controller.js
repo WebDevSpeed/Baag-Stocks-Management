@@ -1,3 +1,5 @@
+//  This file is used to crate and call restful API's
+
 import User from "../models/user.model.js";
 import bcrypt from "bcrypt";
 
