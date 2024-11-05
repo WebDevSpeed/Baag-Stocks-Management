@@ -1,3 +1,6 @@
+//    Main file to run server and connect to database
+
+
 import express from "express";
 import 'dotenv/config';
 import connectDB from "./DB/connectDB.js";
@@ -33,6 +36,8 @@ app.post("/register", async (req, res) => {
 
 
 const PORT = process.env.PORT;
+
+// app.listen run the server in the PORT number whatever it is given
 
 connectDB().then(()=>{
     app.listen(PORT, ()=>{
